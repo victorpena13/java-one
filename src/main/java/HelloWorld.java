@@ -28,6 +28,9 @@ public class HelloWorld {
  * you can assign a value of lesser precision to a type of greater precision, but not the other way around.
  */
 
+// single quotes denote, a character, while double quotes represent a string.
+
+
     }
 
 }
