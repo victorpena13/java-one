@@ -4,5 +4,16 @@ public class HelloWorld {
         System.out.println("hello world");
         System.out.println("code inside curly brackets should be indented");
         System.out.println("with 4 spaces");
+
+        // I am a single line comment
+
+        /* I take up one line */
+
+/**
+ * I take up
+ * multiple
+ * lines
+ */
+
     }
 }
