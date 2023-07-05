@@ -24,9 +24,26 @@ public class SyntaxTypesVariables {
         System.out.println(++y); // 6
         System.out.println(y); //6
 
+        // relevant shorthand assignment operators
 
 
+        int a = 4;
+        a = a + 5;
 
+        int b = 4;
+        b += 5;
+
+        int c = 3;
+        int d = 4;
+        d = d * c;
+
+        int e = 3;
+        int f = 4;
+        f *= c;
+
+        int maxValue = Integer.MAX_VALUE;
+        System.out.println("int max value: " + maxValue);
+        System.out.println(++maxValue); // -2147483648
 
     }
 }
