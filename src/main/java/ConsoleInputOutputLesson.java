@@ -12,6 +12,8 @@ public class ConsoleInputOutputLesson {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("\nenter something: ");
+        //scanner.next() - only captures first word.
+        //scanner.nextLine() - captures sentences.
         String userInput = scanner.next();
 
         System.out.println("you entered --> \"" + userInput + "\" <--");
