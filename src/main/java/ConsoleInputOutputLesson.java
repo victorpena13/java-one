@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ConsoleInputOutputLesson {
 
     public static void main(String[] args) {
@@ -7,5 +9,11 @@ public class ConsoleInputOutputLesson {
         String greeting = "Salutations";
 
         System.out.printf("%s, %s!", greeting, name);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\nenter something: ");
+        String userInput = scanner.next();
+
+        System.out.println("you entered --> \"" + userInput + "\" <--");
     }
 }
