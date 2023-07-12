@@ -17,5 +17,7 @@ public class ConsoleInputOutputLesson {
         String userInput = scanner.next();
 
         System.out.println("you entered --> \"" + userInput + "\" <--");
+
+
     }
 }
