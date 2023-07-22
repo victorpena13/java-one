@@ -38,5 +38,18 @@ public class ControlFlowExercises {
             System.out.println(f);
         }
 
+        for(int g = 1; g<=100; g++) {
+
+            if(g%3==0 & g%5==0){
+                System.out.println("fizzbuzz");
+            } else if(g%3==0) {
+                System.out.println("fizz");
+            } else if(g%5==0) {
+                System.out.println("buzz");
+            } else {
+                System.out.println(g);
+            }
+        }
+
     }
 }
