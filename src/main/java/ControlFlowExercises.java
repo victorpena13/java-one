@@ -34,5 +34,9 @@ public class ControlFlowExercises {
             System.out.println(e);
         }
 
+        for(long f = 2; f<=1000000;f*=f) {
+            System.out.println(f);
+        }
+
     }
 }
