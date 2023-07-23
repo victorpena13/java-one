@@ -63,7 +63,6 @@ public class ControlFlowExercises {
         System.out.printf("%15s| %15s| %15s|%n", "number", "squared", "cubed");
         for(int i = 0; i <= userInt; i++){
             System.out.printf("%15s| %15s| %15s|%n", i, i*i, i*i*i);
-//            System.out.print(i + " | " + i*i + " | " + (i*i*i) );
         }
     }
 
