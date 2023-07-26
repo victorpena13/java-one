@@ -13,10 +13,10 @@ public class Bob {
                System.out.println("sure");
            } else if (userInput.endsWith("!")) {
                System.out.println("whoa, chill out");
-           } else if (userInput.startsWith("") & userInput.endsWith("")) {
+           } else if (userInput.equals("")) {
                System.out.println("fine, be that way");
            } else if (userInput.equalsIgnoreCase("exit")) {
-               return;
+               break;
            } else {
                System.out.println("whatever");
            }
