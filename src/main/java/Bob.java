@@ -8,14 +8,17 @@ public class Bob {
         System.out.println("talk to bob: ");
         String userInput = scanner.nextLine();
 
-        switch(userInput) {
-            case "?":
-                System.out.println("Sure!");
-                break;
+        if(userInput.endsWith("?")) {
+            System.out.println("sure");
+        } else if(userInput.endsWith("!")) {
+            System.out.println("whoa, chill out");
+        } else if(userInput.startsWith("") & userInput.endsWith("")) {
+            System.out.println("fine, be that way");
+        } else if(userInput.equalsIgnoreCase("exit")) {
+            return;
+        } else {
+            System.out.println("whatever");
         }
-
-
-
 
     }
 }
