@@ -12,8 +12,11 @@ public class MethodsExercises {
         return a * b;
     }
 
-    public static int division(int a, int b) {
-        return a/b;
+    public static void division(int a, int b) {
+        if(a == 0 | b == 0) {
+           System.out.println("undefined");
+        }
+        System.out.println(a/b);
     }
 
     public static int modulus(int a, int b) {
@@ -24,7 +27,9 @@ public class MethodsExercises {
         System.out.println(addition(1,2)); // 3
         System.out.println(subtraction(1,2)); // -1
         System.out.println(multiplication(1,2)); //2
-        System.out.println(division(1,2));
+        division(1,2);
+        division(1,0);
         System.out.println(modulus(2,1));
+
     }
 }
