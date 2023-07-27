@@ -42,12 +42,22 @@ public class MethodsLesson {
         return s.toUpperCase() + "!!!";
     }
 
+    //counting from 5 to 1 using recursion
+    public static void count(int n) {
+        if (n <= 0) {
+            System.out.println("all done!");
+        }
+        System.out.println(n);
+        count(n-1);
+    }
+
     public static void main(String[] args) {
 
         String changeMe = "Hello!!!";
 
         changeString(changeMe);
         System.out.println(changeMe);
+        count(5);
 
     }
 }
