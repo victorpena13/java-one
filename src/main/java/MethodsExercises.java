@@ -19,6 +19,20 @@ public class MethodsExercises {
         return result;
     }
 
+    public static int multiplyRecursion(int a, int b) {
+        int result = 0;
+        if(a == 0 | b == 0) {
+            result += 0;
+        } else if (a == 1) {
+            result += b;
+        } else if (b == 1) {
+            result += a;
+        } else {
+            result += a + multiplyRecursion(a, b-1);
+        }
+        return result;
+    }
+
     public static void division(int a, int b) {
         if(a == 0) {
            System.out.println("undefined");
@@ -41,9 +55,16 @@ public class MethodsExercises {
         division(1,2);
         division(1,0);
         System.out.println(modulus(2,1));
-        System.out.println("test: ");
+        System.out.println("multiply with loop:  ");
         System.out.println(multiplyWithLoop(2,5));
         System.out.println(multiplyWithLoop(3,5));
+        System.out.println("recursion: ");
+        System.out.println(multiplyRecursion(2,5)); // 10
+        System.out.println(multiplyRecursion(0,2)); // 0
+        System.out.println(multiplyRecursion(3,0)); // 0
+        System.out.println(multiplyRecursion(1,2)); // 2
+        System.out.println(multiplyRecursion(5,1)); // 5
+
 
     }
 }
