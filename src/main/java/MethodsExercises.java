@@ -51,7 +51,9 @@ public class MethodsExercises {
         return a % b;
     }
 
-    public static void getInteger(int min, int max) {
+    //recursion:
+    public static int getInteger(int min, int max) {
+        int result = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.print("guess a number between " + min + " & " + max + ": ");
         int userInt = scanner.nextInt();
@@ -63,7 +65,19 @@ public class MethodsExercises {
             getInteger(min,max);
         } else if (userInt >= min & userInt <= max) {
             System.out.println("you got it");
+            result += userInt;
         }
+        return result;
+    }
+
+    public static void factorial() {
+        int test = 1;
+        int userInteger = getInteger(1, 10);
+        for (int i = 1; i <= userInteger; i++) {
+            test *= i;
+            System.out.println(i);
+        }
+        System.out.println("test test" + test);
     }
 
 
@@ -85,6 +99,7 @@ public class MethodsExercises {
         System.out.println(multiplyRecursion(5,1)); // 5
 
         getInteger(4,10);
+        factorial();
 
 
     }
