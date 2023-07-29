@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.Random;
+
 public class MethodsExercises {
     public static int addition(int a, int b) {
         return a + b;
@@ -48,6 +51,22 @@ public class MethodsExercises {
         return a % b;
     }
 
+    public static void getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("guess a number between " + min + " & " + max + ": ");
+        int userInt = scanner.nextInt();
+        if(userInt<min) {
+            System.out.println("higher");
+            getInteger(min,max);
+        } else if (userInt > max) {
+            System.out.println("lower");
+            getInteger(min,max);
+        } else if (userInt >= min & userInt <= max) {
+            System.out.println("you got it");
+        }
+    }
+
+
     public static void main(String[] args) {
         System.out.println(addition(1,2)); // 3
         System.out.println(subtraction(1,2)); // -1
@@ -64,6 +83,8 @@ public class MethodsExercises {
         System.out.println(multiplyRecursion(3,0)); // 0
         System.out.println(multiplyRecursion(1,2)); // 2
         System.out.println(multiplyRecursion(5,1)); // 5
+
+        getInteger(4,10);
 
 
     }
