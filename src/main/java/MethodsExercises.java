@@ -71,13 +71,13 @@ public class MethodsExercises {
     }
 
     public static void factorial() {
-        int test = 1;
+        int factorial = 1;
         int userInteger = getInteger(1, 10);
         for (int i = 1; i <= userInteger; i++) {
-            test *= i;
+            factorial *= i;
             System.out.println(i);
         }
-        System.out.println("test test" + test);
+        System.out.println("test test" + factorial);
     }
 
 
