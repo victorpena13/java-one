@@ -23,5 +23,8 @@ public class Person {
         grace.firstName = "Grace";
         grace.lastName = "Hopper";
 
+        // referencing a static field;
+        System.out.println(Math.PI);
+
     }
 }
