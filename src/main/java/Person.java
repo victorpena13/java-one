@@ -1,4 +1,6 @@
 public class Person {
+
+    public static long worldPopulation = 7_500_000_000L;
     public String firstName;
     public String lastName;
 
