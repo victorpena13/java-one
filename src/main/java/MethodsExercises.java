@@ -77,8 +77,10 @@ public class MethodsExercises {
             factorial *= i;
             System.out.println(i);
         }
-        System.out.println("test test" + factorial);
+
     }
+
+
 
 
     public static void main(String[] args) {
