@@ -13,6 +13,10 @@ public class Person {
         lastName = lastname;
     }
 
+    public Person() {
+        System.out.println("a new person is being created without a name");
+    }
+
     public String sayHello() {
         return String.format("Hello from %s %s!", firstName, lastName);
     }
@@ -35,6 +39,9 @@ public class Person {
 
         // referencing a static field;
         System.out.println(Math.PI);
+
+        Person newHire = new Person("Victor", "Pena");
+        System.out.println(newHire);
 
     }
 }
