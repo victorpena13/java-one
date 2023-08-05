@@ -19,5 +19,18 @@ public class Input {
         }
     }
 
+    public int getInt(int min, int max) {
+        System.out.println("enter a number between " + min + "&" + max);
+        String userNumber = getString();
+        int userNumberConverted = Integer.parseInt(userNumber);
+        if(userNumberConverted <= min & userNumberConverted >= max) {
+            return userNumberConverted;
+        } else {
+            getInt(min,max);
+        }
+
+
+    }
+
 
 }
