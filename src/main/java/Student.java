@@ -1,7 +1,7 @@
 public class Student {
-
     public String name;
     public String cohort;
+    private double grade;
 
     public Student(String studentName) {
         this(studentName, "unassigned");
