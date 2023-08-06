@@ -21,15 +21,14 @@ public class Input {
 
     public int getInt(int min, int max) {
         System.out.println("enter a number between " + min + " & " + max + ": ");
-        String userNumber = getString();
-        int userNumberConverted = Integer.parseInt(userNumber);
-        if (userNumberConverted >= min & userNumberConverted <= max) {
+        int userNumber = getInt();
+        if (userNumber >= min & userNumber <= max) {
             System.out.println("correct");
 
         } else {
             getInt(min, max);
         }
-        return userNumberConverted;
+        return userNumber;
     }
 
     public int getInt() {
