@@ -37,14 +37,13 @@ public class Input {
 
     public double getDouble(int min, int max) {
         System.out.print("enter a number between " + min + " & " + max + ": ");
-        String userNumber = getString();
-        double userNumberConverted = Integer.parseInt(userNumber);
-        if (userNumberConverted >= min & userNumberConverted <= max) {
+        double userNumber = getDouble();
+        if (userNumber>= min & userNumber <= max) {
             System.out.println("correct");
         } else {
             getInt(min, max);
         }
-        return userNumberConverted;
+        return userNumber;
     }
 
     public double getDouble() {
