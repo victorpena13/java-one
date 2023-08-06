@@ -6,8 +6,7 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        String userInput = scanner.nextLine();
-        return userInput;
+        return scanner.nextLine();
     }
 
     public boolean yesNo() {
@@ -33,6 +32,10 @@ public class Input {
         return userNumberConverted;
     }
 
+    public int getInt() {
+        return scanner.nextInt();
+    }
+
     public double getDouble(int min, int max) {
         System.out.print("enter a number between " + min + " & " + max + ": ");
         String userNumber = getString();
@@ -43,6 +46,10 @@ public class Input {
             getInt(min, max);
         }
         return userNumberConverted;
+    }
+
+    public double getDouble() {
+        return scanner.nextDouble();
     }
 
     public static void main(String[] args) {
