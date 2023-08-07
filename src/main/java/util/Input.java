@@ -53,7 +53,6 @@ public class Input {
     public static void main(String[] args) {
 
         Input input = new Input();
-
         input.getInt(10,20);
 
     }

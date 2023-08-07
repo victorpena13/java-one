@@ -8,8 +8,20 @@ public class CircleApp {
 
         Input input = new Input();
 
-        System.out.print("enter the radius of your circle: ");
-        input.getString();
+        boolean yesNo;
+        do {
+            System.out.print("enter the radius of your circle: ");
+            double userRadius = input.getDouble();
+            Circle circleOne = new Circle(userRadius);
+            System.out.println("area of circle: " + circleOne.getArea());
+            System.out.println("circumference of circle: " + circleOne.getCircumference());
+            input.getString();
+            yesNo = input.yesNo();
+        } while(yesNo);
+
+
+
+
 
 
 
