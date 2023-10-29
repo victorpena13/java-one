@@ -8,6 +8,7 @@ public class SyntaxTypesVariables {
         System.out.println(myString);
 
         // myString = 'a'; error because i provided char(single character) not string.
+        // myString = 3.13149; error because i provided a double and needs a string value.
 
     }
 }
