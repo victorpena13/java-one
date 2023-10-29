@@ -6,7 +6,11 @@ public class ArraysExercises {
 
         int[] numbers = {1,2,3,4,5};
         System.out.println(Arrays.toString(numbers));
-        // has to use tostring because arrays are a reference.
+        // has to use toString because arrays are a reference.
+
+        Person[] persons = new Person[3];
+
+        System.out.println(Arrays.toString(persons));
 
 
 
