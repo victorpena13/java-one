@@ -14,7 +14,14 @@ public class ConsoleExercises {
         System.out.print("enter a integer and i will store that value: ");
         int userInt = scanner.nextInt();
 
-        System.out.println("you entered: " + userInt);
+        System.out.println("you entered: " + userInt); // throws an exception error if anything but a number is entered
+
+        System.out.print("enter 3 words: ");
+        String firstWord = scanner.next();
+        String secondWord = scanner.next();
+        String thirdWord = scanner.next();
+
+        System.out.printf("%s %s %s\n", thirdWord, secondWord, firstWord);
 
 
 
