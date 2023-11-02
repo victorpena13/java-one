@@ -29,6 +29,21 @@ public class ConsoleExercises {
 
         System.out.println(fullStatement);
 
+        System.out.print("first enter width and then length: ");
+        String userWidth = scanner.next();
+        String userLength = scanner.next();
+        int parsedWidth = Integer.parseInt(userWidth);
+        int parsedLength = Integer.parseInt(userLength);
+        int userArea = parsedWidth * parsedLength;
+        int userPerimeter = (parsedWidth*2) + (parsedLength * 2);
+
+        System.out.println("area: " + userArea);
+        System.out.println("perimeter: " + userPerimeter);
+
+
+
+
+
 
 
 
