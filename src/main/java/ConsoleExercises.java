@@ -22,6 +22,15 @@ public class ConsoleExercises {
         String thirdWord = scanner.next();
 
         System.out.printf("%s %s %s\n", thirdWord, secondWord, firstWord);
+        // three words must be entered or you will not be able to continue.
+        scanner.nextLine(); // this line is necessary to grab the users next input.
+        System.out.print("\nenter your original statement: ");
+        String fullStatement = scanner.nextLine();
+
+        System.out.println(fullStatement);
+
+
+
 
 
 
