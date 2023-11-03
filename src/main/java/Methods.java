@@ -12,13 +12,26 @@ public class Methods {
         return x*y;
     }
 
-    public static int division(int x, int y) {
-        return x/y;
+    public static int multiplyWithOutStarSymbol(int x, int y) {
+        int result=0;
+        for(int i = 0; i < y; i++) {
+            result = result + x;
+        }
+        return result;
+    }
+
+    public static String division(int x, int y) {
+        if(y==0) {
+            return "undefined";
+        }
+        return Integer.toString(x/y);
     }
 
     public static int modulus(int x, int y) {
         return x%y;
     }
+
+
 
 
     public static void main(String[] args) {
@@ -27,5 +40,10 @@ public class Methods {
         System.out.println(multiplication(2,2)); //4
         System.out.println(division(2,2)); //1
         System.out.println(modulus(2,2)); //0
+
+        System.out.println(division(2,0));
+        System.out.println(multiplyWithOutStarSymbol(5,5));
+        System.out.println(multiplyWithOutStarSymbol(2,2));
+
     }
 }
