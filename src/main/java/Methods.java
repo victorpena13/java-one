@@ -53,6 +53,9 @@ public class Methods {
         System.out.println(multiplyWithOutStarSymbol(2,2));
         System.out.println(multiplicationRecursion(2,2));
         System.out.println(multiplicationRecursion(5,5));
+        System.out.println(multiplicationRecursion(5,0));
+        System.out.println(multiplicationRecursion(1,5));
+        System.out.println(multiplicationRecursion(2,1));
 
     }
 }
