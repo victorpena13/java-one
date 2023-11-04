@@ -20,6 +20,14 @@ public class Methods {
         return result;
     }
 
+    public static int multiplicationRecursion(int x, int y) {
+        if(x == 0 | y== 0) {
+            return 0;
+        } else {
+            return x + multiplicationRecursion(x,y-1);
+        }
+    }
+
     public static String division(int x, int y) {
         if(y==0) {
             return "undefined";
@@ -40,10 +48,11 @@ public class Methods {
         System.out.println(multiplication(2,2)); //4
         System.out.println(division(2,2)); //1
         System.out.println(modulus(2,2)); //0
-
         System.out.println(division(2,0));
         System.out.println(multiplyWithOutStarSymbol(5,5));
         System.out.println(multiplyWithOutStarSymbol(2,2));
+        System.out.println(multiplicationRecursion(2,2));
+        System.out.println(multiplicationRecursion(5,5));
 
     }
 }
