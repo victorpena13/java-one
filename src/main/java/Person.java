@@ -1,23 +1,21 @@
+// defined a class named Person. with 2 instance variables (firstname & lastname). the class also defines an instance method, sayHello.
 public class Person {
-    private String name;
+    public String firstName;
+    public String lastName;
 
-    public Person(String name) {
-        this.name = name;
+    public String sayHello() {
+        return String.format("Hello from %s %s!", firstName, lastName);
+
     }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void sayHello() {
-        System.out.println("Hello from " + this.name);
-    }
-
     public static void main(String[] args) {
+        //inside main method, created an instance of the Person class'
+
+        Person rick = new Person();
+        rick.firstName = "Rick";
+        rick.lastName = "Sanchez";
+        System.out.println(rick.sayHello());
+
+
 
     }
 }
