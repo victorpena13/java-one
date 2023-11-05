@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Methods {
 
     public static int addition(int x, int y) {
@@ -39,6 +41,20 @@ public class Methods {
         return x%y;
     }
 
+    public static int getInteger(int x, int y) {
+        int userInt;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("enter a number between " + x + " and " + y + ": ");
+        userInt = scanner.nextInt();
+        if(userInt < x | userInt > y) {
+            System.out.print("not within range. try again: ");
+            userInt = getInteger(x,y);
+        } else {
+            System.out.print("that number is within range. you entered ");
+        }
+        return userInt;
+    }
+
 
 
 
@@ -56,6 +72,7 @@ public class Methods {
         System.out.println(multiplicationRecursion(5,0));
         System.out.println(multiplicationRecursion(1,5));
         System.out.println(multiplicationRecursion(2,1));
+        System.out.println(getInteger(5,10));
 
     }
 }
