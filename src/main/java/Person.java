@@ -1,5 +1,7 @@
 // defined a class named Person. with 2 instance variables (firstname & lastname). the class also defines an instance method, sayHello.
 public class Person {
+    //static instance:
+    public static long wordPopulation = 7_500_000_000L;
     public String firstName;
     public String lastName;
 
