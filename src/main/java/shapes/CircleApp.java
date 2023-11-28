@@ -12,9 +12,9 @@ public class CircleApp {
                 count++;
                     System.out.print("enter the radius of your circle: ");
                     double userRadius = input.getDouble();
-                    Circle circleOne = new Circle(userRadius);
+                    Shape circleOne = new Circle(userRadius);
                     System.out.println("area of circle: " + circleOne.getArea());
-                    System.out.println("circumference of circle: " + circleOne.getCircumference());
+                    System.out.println("circumference of circle: " + circleOne.getPerimeter());
                     System.out.println("circle count: " + count);
                     input.getString();
                     yesNo = input.yesNo();
