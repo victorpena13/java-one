@@ -14,8 +14,14 @@ public class ShapeTest {
         System.out.println(rectangle1.getPerimeter());
 
         Shape circle1 = new Circle(4);
-        circle1.getArea();
-        circle1.getPerimeter();
+        System.out.println("circle1 area and circumference");
+        System.out.println(circle1.getArea());
+        System.out.println(circle1.getPerimeter());
+
+        Measurable myShape = new Circle(6);
+
+        System.out.println(myShape.getPerimeter());
+        System.out.println(myShape.getArea());
 
     }
 }
