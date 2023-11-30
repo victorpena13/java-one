@@ -44,9 +44,17 @@ public class GradesApplication {
         do{
             System.out.println("Here are the GitHub usernames of our students: ");
             displayGitHubUsernames(students);
-            System.out.print("\nWhat student would you like to see more information on: ");
+            System.out.print("\nWhat student would you like to see more information on or enter all: ");
             String userInput = scanner.next();
+            if(userInput.equalsIgnoreCase("all")) {
+                System.out.println("github username | name | grade average | all grades");
+                for (Map.Entry<String, Student> mapElement : students.entrySet()) {
+                    String key = mapElement.getKey();
+                    Student value = mapElement.getValue();
+                    System.out.println(" | " + key + " | " + value.getName() + " | " + value.getGradeAverage() + " " + value.viewGrades());
 
+                }
+            }
             if (students.containsKey(userInput) == true) {
                 System.out.println("github username: " + userInput);
                 System.out.println("name: " + students.get(userInput).getName());
