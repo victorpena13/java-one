@@ -48,12 +48,15 @@ public class GradesApplication {
             String userInput = scanner.next();
             if(userInput.equalsIgnoreCase("all")) {
                 System.out.println("github username | name | grade average | all grades");
+                int classAverage = 0;
                 for (Map.Entry<String, Student> mapElement : students.entrySet()) {
                     String key = mapElement.getKey();
                     Student value = mapElement.getValue();
+                    classAverage += value.getGradeAverage();
                     System.out.println(" | " + key + " | " + value.getName() + " | " + value.getGradeAverage() + " " + value.viewGrades());
-
                 }
+                classAverage = classAverage/students.size();
+                System.out.println("class average: " + classAverage);
             }
             if (students.containsKey(userInput) == true) {
                 System.out.println("github username: " + userInput);
