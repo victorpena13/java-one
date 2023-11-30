@@ -1,10 +1,13 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Student {
     private String name;
     private ArrayList<Integer> grades = new ArrayList<>();
+
+    private HashMap<String, Student> attendance = new HashMap<>();
 
     public Student(String name) {
         this.name = name;
@@ -16,6 +19,9 @@ public class Student {
 
     public void addGrade(int grade) {
         grades.add(grade);
+    }
+    public ArrayList<Integer> viewGrades() {
+        return grades;
     }
 
     public double getGradeAverage(){
