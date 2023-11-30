@@ -1,12 +1,14 @@
 package grades;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class GradesApplication {
 
+
     public static void main(String[] args) {
 
-        HashMap<Student, String> students = new HashMap<>();
+        HashMap<String,Student> students = new HashMap<>();
 
         Student student1 = new Student("jane");
         Student student2 = new Student("victor");
@@ -24,9 +26,15 @@ public class GradesApplication {
         student3.addGrade(100);
         student3.addGrade(90);
 
-        students.put(student1, "jane22");
-        students.put(student2, "victorpena13");
-        students.put(student3, "cmpena23");
+        students.put("jane22", student1);
+        students.put("victorpena13", student2);
+        students.put("cmpena23", student3);
+
+        for(Map.Entry<String,Student> mapElement : students.entrySet()) {
+            String key = mapElement.getKey();
+            System.out.println(key);
+        }
+
 
     }
 }
