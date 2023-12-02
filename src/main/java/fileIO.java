@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,6 +27,14 @@ public class fileIO {
         Path filepath = Paths.get("data", "groceries.txt");
 
         Files.write(filepath, groceryList);
+
+        Files.write(
+                Paths.get("data", "groceries.txt"),
+                Arrays.asList("eggs"),
+                StandardOpenOption.APPEND
+        );
+
+
 
     }
 
