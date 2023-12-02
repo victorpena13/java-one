@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ContactsApplication {
+    static Path contactsPath = Paths.get("data", "contacts.txt");
+    static Scanner scanner = new Scanner(System.in);
+
 
     public static void addContact(String firstName, String lastName, String phoneNumber) throws IOException {
 
@@ -21,7 +24,6 @@ public class ContactsApplication {
     }
 
     public static void viewContacts() throws IOException {
-        Path contactsPath = Paths.get("data", "contacts.txt");
         List<String> contactList = Files.readAllLines(contactsPath);
 
         for(int i = 0; i < contactList.size(); i += 1) {
@@ -29,14 +31,12 @@ public class ContactsApplication {
         }
     }
 
-    public static void searchContact() throws IOException {
-        Scanner scanner = new Scanner(System.in);
+    public static String searchContact() throws IOException {
         System.out.println("search contact.");
         System.out.print("enter first name: ");
         String userSearchFirstName = scanner.next();
         System.out.print("enter last name: ");
         String userSearchLastName = scanner.next();
-        Path contactsPath = Paths.get("data", "contacts.txt");
         List<String> contactList = Files.readAllLines(contactsPath);
 
         for (int i =0; i < contactList.size(); i +=1) {
@@ -44,12 +44,20 @@ public class ContactsApplication {
                 System.out.println(contactList.get(i));
             }
         }
+        return userSearchFirstName + " " + userSearchLastName;
+    }
 
-
-
-
-
-
+    public static void deleteContact() throws IOException {
+        String searchedContact = searchContact();
+        List<String> contactList = Files.readAllLines(contactsPath);
+        List<String> newList = new ArrayList<>();
+        for (int i =0; i < contactList.size(); i +=1) {
+            if (contactList.get(i).contains(searchedContact)) {
+                continue;
+            }
+            newList.add(contactList.get(i));
+            Files.write(Paths.get("data","contacts.txt"), newList);
+        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -91,6 +99,8 @@ public class ContactsApplication {
 
         } else if(userInt == 3) {
             searchContact();
+        } else if(userInt == 4) {
+            deleteContact();
         }
 
 
