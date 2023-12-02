@@ -1,5 +1,8 @@
 package grades;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -15,7 +18,18 @@ public class GradesApplication {
         }
     }
 
-    public static void main(String[] args) {
+    public static void recordAttendance(String date, String value) throws ParseException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("enter date: ");
+        String dateStr = scanner.next();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM");
+        Date userDate = sdf.parse(dateStr);
+        System.out.println(userDate);
+
+
+    }
+
+    public static void main(String[] args) throws ParseException {
         Scanner scanner = new Scanner(System.in);
         HashMap<String, Student> students = new HashMap<>();
 
@@ -38,6 +52,8 @@ public class GradesApplication {
         students.put("jane22", student1);
         students.put("victorpena13", student2);
         students.put("cmpena23", student3);
+
+        recordAttendance("13/01/1995", "P");
 
         System.out.println("Welcome!");
 
